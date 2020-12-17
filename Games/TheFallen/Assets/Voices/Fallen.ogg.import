@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Fallen.ogg-921f832a3b1b89508a344d3e7baaec0d.oggstr"
+
+[deps]
+
+source_file="res://Games/TheFallen/Assets/Voices/Fallen.ogg"
+dest_files=[ "res://.import/Fallen.ogg-921f832a3b1b89508a344d3e7baaec0d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

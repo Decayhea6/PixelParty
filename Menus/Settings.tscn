@@ -1,0 +1,774 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://UI/UI Theme.theme" type="Theme" id=1]
+[ext_resource path="res://Fonts/slkscr.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/Titlefont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/slkscre.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Menus/Settings.gd" type="Script" id=5]
+[ext_resource path="res://UI/CheckButton/OffDisabled.png" type="Texture" id=6]
+[ext_resource path="res://UI/x.png" type="Texture" id=7]
+[ext_resource path="res://UI/CheckButton/OnDisabled.png" type="Texture" id=8]
+[ext_resource path="res://UI/arrowkey.svg" type="Texture" id=9]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/inevitable.png" type="Texture" id=10]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/banshee.png" type="Texture" id=11]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/wizard.png" type="Texture" id=12]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/worldsoul.png" type="Texture" id=13]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/fallenseer.png" type="Texture" id=14]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/villager1.png" type="Texture" id=15]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/airelemental.png" type="Texture" id=16]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/morphling.png" type="Texture" id=17]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/chaos.png" type="Texture" id=18]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/bonkyboi.png" type="Texture" id=19]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/guardian.png" type="Texture" id=20]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/demoncassistant.png" type="Texture" id=21]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/terrorist.png" type="Texture" id=22]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/spy.png" type="Texture" id=23]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/theif.png" type="Texture" id=24]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/seer.png" type="Texture" id=25]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/minion.png" type="Texture" id=26]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/protector.png" type="Texture" id=27]
+[ext_resource path="res://Games/TheFallen/Assets/Icons/shapeshifter.png" type="Texture" id=28]
+[ext_resource path="res://UI/CheckButton/OffDisabledsmall.png" type="Texture" id=29]
+[ext_resource path="res://UI/CheckButton/OnDisabledsmall.png" type="Texture" id=30]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 120, 40 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "generalui"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("generalui:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SettingsLabel:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "General Settings" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("thefallen:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "thefallen"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("generalui:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SettingsLabel:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "The Fallen Settings" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("thefallen:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 40, 40 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 37
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 42
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="Settings" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="SettingsLabel" type="Label" parent="."]
+margin_top = 16.8648
+margin_right = 1080.0
+margin_bottom = 57.8648
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.980392, 0.980392, 0.980392, 1 )
+text = "General Settings"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ApplyLabel" type="Label" parent="."]
+margin_left = 270.65
+margin_top = 505.95
+margin_right = 480.65
+margin_bottom = 576.95
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.701961, 0.898039, 0.623529, 1 )
+text = "APPLY"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelLabel" type="Label" parent="."]
+margin_left = 547.367
+margin_top = 505.95
+margin_right = 793.367
+margin_bottom = 576.95
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.501961, 0.52549, 1 )
+text = "Cancel"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Apply" type="TouchScreenButton" parent="."]
+position = Vector2( 256, 512 )
+shape = SubResource( 3 )
+
+[node name="Go Back" type="TouchScreenButton" parent="."]
+position = Vector2( 552, 512 )
+shape = SubResource( 3 )
+
+[node name="Modes" type="AnimationPlayer" parent="."]
+anims/generalui = SubResource( 4 )
+anims/thefallen = SubResource( 5 )
+
+[node name="arrowkeyleft" type="Sprite" parent="."]
+position = Vector2( 50.9381, 284.061 )
+scale = Vector2( 0.260274, 0.260274 )
+texture = ExtResource( 9 )
+
+[node name="arrowketleftpress" type="TouchScreenButton" parent="."]
+position = Vector2( 17.9797, 245.722 )
+shape = SubResource( 6 )
+shape_visible = false
+
+[node name="arrowkeyright" type="Sprite" parent="."]
+position = Vector2( 1028.76, 278.64 )
+rotation = 3.14159
+scale = Vector2( 0.260274, 0.260274 )
+texture = ExtResource( 9 )
+
+[node name="arrowketrightpress" type="TouchScreenButton" parent="."]
+position = Vector2( 984.388, 247.221 )
+shape = SubResource( 6 )
+shape_visible = false
+
+[node name="generalui" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="LineEdit" parent="generalui"]
+margin_left = 490.184
+margin_top = 109.0
+margin_right = 891.184
+margin_bottom = 175.0
+theme = ExtResource( 1 )
+custom_icons/clear = ExtResource( 7 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/selection_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+custom_colors/cursor_color = Color( 0.976471, 0.976471, 0.976471, 1 )
+max_length = 13
+context_menu_enabled = false
+placeholder_text = "Type Here..."
+placeholder_alpha = 0.364
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HostId" type="LineEdit" parent="generalui"]
+margin_left = 490.0
+margin_top = 197.0
+margin_right = 891.0
+margin_bottom = 263.0
+theme = ExtResource( 1 )
+custom_icons/clear = ExtResource( 7 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/selection_color = Color( 0.941176, 0.941176, 0.941176, 1 )
+custom_colors/cursor_color = Color( 0.976471, 0.976471, 0.976471, 1 )
+max_length = 5
+context_menu_enabled = false
+placeholder_text = "Type Here..."
+placeholder_alpha = 0.364
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsernameLabel" type="Label" parent="generalui"]
+margin_left = 195.02
+margin_top = 121.735
+margin_right = 445.02
+margin_bottom = 163.735
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Username:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ServerLabel" type="Label" parent="generalui"]
+margin_left = 195.0
+margin_top = 194.0
+margin_right = 447.0
+margin_bottom = 236.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Port:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicLabel" type="Label" parent="generalui"]
+margin_left = 193.02
+margin_top = 274.463
+margin_right = 443.02
+margin_bottom = 316.463
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Music:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFXLabel" type="Label" parent="generalui"]
+margin_left = 191.02
+margin_top = 342.96
+margin_right = 441.02
+margin_bottom = 384.96
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "SFX:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullscreenLabel" type="Label" parent="generalui"]
+margin_left = 192.02
+margin_top = 418.543
+margin_right = 482.02
+margin_bottom = 460.543
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Fullscreen:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="CheckBox" parent="generalui"]
+margin_left = 386.853
+margin_top = 274.05
+margin_right = 426.853
+margin_bottom = 314.05
+theme = ExtResource( 1 )
+custom_icons/radio_checked = ExtResource( 6 )
+custom_icons/checked = ExtResource( 6 )
+custom_icons/radio_unchecked = ExtResource( 8 )
+custom_icons/unchecked = ExtResource( 8 )
+pressed = true
+flat = true
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFX" type="CheckBox" parent="generalui"]
+margin_left = 386.853
+margin_top = 339.785
+margin_right = 426.853
+margin_bottom = 379.785
+theme = ExtResource( 1 )
+custom_icons/radio_checked = ExtResource( 6 )
+custom_icons/checked = ExtResource( 6 )
+custom_icons/radio_unchecked = ExtResource( 8 )
+custom_icons/unchecked = ExtResource( 8 )
+pressed = true
+flat = true
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fullscreen" type="CheckBox" parent="generalui"]
+margin_left = 554.711
+margin_top = 418.543
+margin_right = 594.711
+margin_bottom = 458.543
+theme = ExtResource( 1 )
+custom_icons/radio_checked = ExtResource( 6 )
+custom_icons/checked = ExtResource( 6 )
+custom_icons/radio_unchecked = ExtResource( 8 )
+custom_icons/unchecked = ExtResource( 8 )
+pressed = true
+flat = true
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="thefallen" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="checkboxes" type="Node2D" parent="thefallen"]
+
+[node name="villager" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 278.0
+margin_top = 177.0
+margin_right = 302.0
+margin_bottom = 201.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fallen" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 406.0
+margin_top = 177.0
+margin_right = 430.0
+margin_bottom = 201.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="theif" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 540.0
+margin_top = 176.0
+margin_right = 564.0
+margin_bottom = 200.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="wizard" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 673.0
+margin_top = 177.0
+margin_right = 697.0
+margin_bottom = 201.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="palladin" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 800.0
+margin_top = 177.0
+margin_right = 824.0
+margin_bottom = 201.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="aethermage" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 278.0
+margin_top = 289.0
+margin_right = 302.0
+margin_bottom = 313.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="spy" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 406.0
+margin_top = 289.0
+margin_right = 430.0
+margin_bottom = 313.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="guardian" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 540.0
+margin_top = 288.0
+margin_right = 564.0
+margin_bottom = 312.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="restless" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 673.0
+margin_top = 289.0
+margin_right = 697.0
+margin_bottom = 313.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seer" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 800.0
+margin_top = 289.0
+margin_right = 824.0
+margin_bottom = 313.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hellspawn" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 278.0
+margin_top = 393.0
+margin_right = 302.0
+margin_bottom = 417.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slime" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 406.0
+margin_top = 393.0
+margin_right = 430.0
+margin_bottom = 417.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fallenseer" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 540.0
+margin_top = 392.0
+margin_right = 564.0
+margin_bottom = 416.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="chmo" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 673.0
+margin_top = 393.0
+margin_right = 697.0
+margin_bottom = 417.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="voidling" type="CheckBox" parent="thefallen/checkboxes"]
+margin_left = 800.0
+margin_top = 393.0
+margin_right = 824.0
+margin_bottom = 417.0
+focus_mode = 0
+custom_icons/checked = ExtResource( 29 )
+custom_icons/unchecked = ExtResource( 30 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="portraits" type="Node2D" parent="thefallen"]
+scale = Vector2( 0.1, 0.1 )
+
+[node name="airelemental" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 3387.73, -1161.63 )
+texture = ExtResource( 16 )
+
+[node name="banshee" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 6850, 2500.56 )
+texture = ExtResource( 11 )
+
+[node name="bonkyboi" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 2560, -1120 )
+texture = ExtResource( 19 )
+
+[node name="chaos" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 2891.59, 3530.56 )
+texture = ExtResource( 18 )
+
+[node name="demoncassistant" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 672.717, -1120.46 )
+texture = ExtResource( 21 )
+
+[node name="fallenseer" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 5510, 3580.56 )
+texture = ExtResource( 14 )
+
+[node name="guardian" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 5495.61, 2474.95 )
+texture = ExtResource( 20 )
+
+[node name="inevitable" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 1683.17, -1166.82 )
+texture = ExtResource( 10 )
+
+[node name="villager1" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 2890, 1350.56 )
+texture = ExtResource( 15 )
+
+[node name="wizard" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 6834.66, 1409.35 )
+texture = ExtResource( 12 )
+
+[node name="worldsoul" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 8120, 3550 )
+texture = ExtResource( 13 )
+
+[node name="minion" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 4180, 1430.56 )
+texture = ExtResource( 26 )
+
+[node name="morphling" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 2885.56, 2528.57 )
+texture = ExtResource( 17 )
+
+[node name="protector" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 8100, 1410 )
+texture = ExtResource( 27 )
+
+[node name="seer" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 8100, 2530 )
+texture = ExtResource( 25 )
+
+[node name="shapeshifter" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 4190, 3510.56 )
+texture = ExtResource( 28 )
+
+[node name="spy" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 4137.69, 2532.17 )
+texture = ExtResource( 23 )
+
+[node name="terrorist" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 6850, 3520.56 )
+texture = ExtResource( 22 )
+
+[node name="theif" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 5512.45, 1404.95 )
+texture = ExtResource( 24 )
+
+[node name="banshee2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 6850, 2500.56 )
+texture = ExtResource( 11 )
+
+[node name="chaos2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 2891.59, 3530.56 )
+texture = ExtResource( 18 )
+
+[node name="fallenseer2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 5510, 3580.56 )
+texture = ExtResource( 14 )
+
+[node name="guardian2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 5495.61, 2474.95 )
+texture = ExtResource( 20 )
+
+[node name="villager2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 2890, 1350.56 )
+texture = ExtResource( 15 )
+
+[node name="wizard2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 6834.66, 1409.35 )
+texture = ExtResource( 12 )
+
+[node name="worldsoul2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 8120, 3550 )
+texture = ExtResource( 13 )
+
+[node name="minion2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 4180, 1430.56 )
+texture = ExtResource( 26 )
+
+[node name="morphling2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 2885.56, 2528.57 )
+texture = ExtResource( 17 )
+
+[node name="protector2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 8100, 1410 )
+texture = ExtResource( 27 )
+
+[node name="seer2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 8100, 2530 )
+texture = ExtResource( 25 )
+
+[node name="shapeshifter2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 4190, 3510.56 )
+texture = ExtResource( 28 )
+
+[node name="spy2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 4137.69, 2532.17 )
+texture = ExtResource( 23 )
+
+[node name="terrorist2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 6850, 3520.56 )
+texture = ExtResource( 22 )
+
+[node name="theif2" type="Sprite" parent="thefallen/portraits"]
+position = Vector2( 5512.45, 1404.95 )
+texture = ExtResource( 24 )
+
+[node name="Voting Time Limit" type="Label" parent="thefallen"]
+margin_left = 298.0
+margin_top = 452.0
+margin_right = 712.0
+margin_bottom = 494.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Voting TIme Limit:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Voting Time Limit2" type="Label" parent="thefallen"]
+margin_top = 56.0
+margin_right = 1080.0
+margin_bottom = 98.0
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Enable/Disable Roles"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="timelimitfallen" type="SpinBox" parent="thefallen"]
+margin_left = 542.0
+margin_top = 435.339
+margin_right = 774.0
+margin_bottom = 491.339
+theme = ExtResource( 1 )
+max_value = 10.0
+step = 0.5
+value = 5.0
+align = 1
+suffix = "Minutes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Apply" to="." method="_on_Apply_pressed"]
+[connection signal="pressed" from="Go Back" to="." method="_on_Go_Back_pressed"]
+[connection signal="animation_started" from="Modes" to="." method="_on_Modes_animation_started"]
+[connection signal="pressed" from="arrowketleftpress" to="." method="_on_arrowketleftpress_pressed"]
+[connection signal="pressed" from="arrowketrightpress" to="." method="_on_arrowketrightpress_pressed"]

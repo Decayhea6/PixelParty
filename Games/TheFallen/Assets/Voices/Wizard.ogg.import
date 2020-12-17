@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Wizard.ogg-a49cabc7af67cfc23ad00872d0c8f896.oggstr"
+
+[deps]
+
+source_file="res://Games/TheFallen/Assets/Voices/Wizard.ogg"
+dest_files=[ "res://.import/Wizard.ogg-a49cabc7af67cfc23ad00872d0c8f896.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

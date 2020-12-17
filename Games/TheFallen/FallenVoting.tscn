@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/slkscrb.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="Animation" id=3]
+resource_name = "startup"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 62.6364, -89.4729 ), Vector2( 64.3182, 1.34387 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "votingtime"
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 1 )
+
+[node name="root" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/startup = SubResource( 3 )
+anims/votingtime = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 64.3182
+margin_top = 1.34387
+margin_right = 1002.32
+margin_bottom = 88.3439
+custom_fonts/font = SubResource( 2 )
+text = "- Voting Time -"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

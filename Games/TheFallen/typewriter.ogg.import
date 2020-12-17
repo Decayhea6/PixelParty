@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/typewriter.ogg-e39c77d9b83f09a1fdea34dd7cc90e9b.oggstr"
+
+[deps]
+
+source_file="res://Games/TheFallen/typewriter.ogg"
+dest_files=[ "res://.import/typewriter.ogg-e39c77d9b83f09a1fdea34dd7cc90e9b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,174 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Fonts/Titlefont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Menus/GameSelection.gd" type="Script" id=2]
+[ext_resource path="res://UI/UI Theme.theme" type="Theme" id=3]
+[ext_resource path="res://Fonts/slkscre.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 150, 40 )
+
+[sub_resource type="StyleBoxLine" id=3]
+color = Color( 1, 0.501961, 0.52549, 1 )
+grow_begin = 18.0
+thickness = 8
+
+[sub_resource type="StyleBoxLine" id=4]
+color = Color( 0.701961, 0.898039, 0.623529, 1 )
+grow_begin = 18.0
+thickness = 8
+
+[sub_resource type="DynamicFont" id=5]
+size = 35
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 40
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 35
+font_data = ExtResource( 4 )
+
+[node name="GameSelection" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -4.0
+margin_right = 1083.0
+margin_bottom = 618.0
+color = Color( 0.141176, 0.141176, 0.141176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gameselect" type="OptionButton" parent="."]
+margin_left = 470.753
+margin_top = 331.438
+margin_right = 982.753
+margin_bottom = 409.438
+focus_mode = 0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+enabled_focus_mode = 0
+text = "Gamemode"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Maxplayers" type="SpinBox" parent="."]
+margin_left = 456.779
+margin_top = 129.565
+margin_right = 654.779
+margin_bottom = 193.565
+theme = ExtResource( 3 )
+min_value = 2.0
+max_value = 256.0
+value = 2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Continue" type="TouchScreenButton" parent="."]
+position = Vector2( 257.477, 495.541 )
+shape = SubResource( 2 )
+
+[node name="Back" type="TouchScreenButton" parent="."]
+position = Vector2( 591.609, 494.598 )
+shape = SubResource( 2 )
+
+[node name="Lobbyname" type="LineEdit" parent="."]
+margin_left = 471.0
+margin_top = 225.0
+margin_right = 982.0
+margin_bottom = 293.0
+theme = ExtResource( 3 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+max_length = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = -1.25992
+margin_top = 1.0
+margin_right = 1078.74
+margin_bottom = 79.0
+custom_fonts/font = ExtResource( 1 )
+text = "Lobby Setup"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="continuelabel" type="Label" parent="."]
+margin_left = 279.539
+margin_top = 511.505
+margin_right = 531.539
+margin_bottom = 552.505
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.701961, 0.898039, 0.623529, 1 )
+text = "Continue"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="backlabel" type="Label" parent="."]
+margin_left = 607.292
+margin_top = 515.581
+margin_right = 859.292
+margin_bottom = 556.581
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 1, 0.501961, 0.52549, 1 )
+text = "Back"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subtitlelobby" type="Label" parent="."]
+margin_left = 62.0453
+margin_top = 238.732
+margin_right = 422.045
+margin_bottom = 280.732
+rect_pivot_offset = Vector2( 85.6919, 15.5 )
+custom_fonts/font = SubResource( 7 )
+text = "Lobby name:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subtitlegamemode" type="Label" parent="."]
+margin_left = 66.153
+margin_top = 341.673
+margin_right = 361.153
+margin_bottom = 383.673
+rect_pivot_offset = Vector2( 85.6919, 15.5 )
+custom_fonts/font = SubResource( 7 )
+text = "Gamemode:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subtitlegamemode2" type="Label" parent="."]
+margin_left = 61.0
+margin_top = 142.0
+margin_right = 456.0
+margin_bottom = 207.0
+rect_pivot_offset = Vector2( 85.6919, 15.5 )
+custom_fonts/font = SubResource( 7 )
+text = "Max Players:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

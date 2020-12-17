@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/slkscre.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Titlefont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Menus/Credits.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/slkscrb.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 15
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 4 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 50, 50 )
+
+[node name="Credits" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -2.0
+margin_right = 1081.0
+margin_bottom = 605.0
+color = Color( 0.141176, 0.141176, 0.141176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -4.0
+margin_top = 90.0
+margin_right = 1077.0
+margin_bottom = 501.0
+custom_fonts/font = SubResource( 1 )
+text = "Game Design and Idea By Denis Khatnyuk
+
+Some sfx from freeound by imjeax
+
+Pixel Fonts made by Jason Kottke from www.fontsquirrel.com
+
+Fallen icons from: Justin NIchole,  (OpenGameart)
+	
+Main Theme is Bossa Antigua by Kevin MacLeod
+Link: https://incompetech.filmmusic.io/song/3454-bossa-antigua
+
+All Licenses Are CC 3 or 4 Unless otherwise specified"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -0.378418
+margin_top = -35.8647
+margin_right = 1078.62
+margin_bottom = 132.135
+custom_fonts/font = ExtResource( 2 )
+text = "CREDITS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 1.18921
+margin_top = 527.0
+margin_right = 1080.19
+margin_bottom = 578.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 0.368627, 0.380392, 1 )
+text = "X"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 490.516, 499.781 )
+shape = SubResource( 3 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -0.432373
+margin_top = 496.977
+margin_right = 1088.57
+margin_bottom = 504.977
+rect_pivot_offset = Vector2( 557.991, 0 )
+color = Color( 0.647059, 0.937255, 0.67451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = -4.0
+margin_top = 93.189
+margin_right = 1085.0
+margin_bottom = 101.189
+rect_pivot_offset = Vector2( 557.991, 0 )
+color = Color( 0.647059, 0.937255, 0.67451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]

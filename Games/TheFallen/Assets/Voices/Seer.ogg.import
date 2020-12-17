@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Seer.ogg-bf6f396a7c8faea84f4c6204fa91a301.oggstr"
+
+[deps]
+
+source_file="res://Games/TheFallen/Assets/Voices/Seer.ogg"
+dest_files=[ "res://.import/Seer.ogg-bf6f396a7c8faea84f4c6204fa91a301.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

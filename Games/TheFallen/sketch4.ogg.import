@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sketch4.ogg-aca6c58c1f53e9049204445d793a78c4.oggstr"
+
+[deps]
+
+source_file="res://Games/TheFallen/sketch4.ogg"
+dest_files=[ "res://.import/sketch4.ogg-aca6c58c1f53e9049204445d793a78c4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

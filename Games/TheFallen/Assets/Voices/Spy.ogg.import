@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Spy.ogg-e93d0de5cca83c37d127e17c85d63c2a.oggstr"
+
+[deps]
+
+source_file="res://Games/TheFallen/Assets/Voices/Spy.ogg"
+dest_files=[ "res://.import/Spy.ogg-e93d0de5cca83c37d127e17c85d63c2a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

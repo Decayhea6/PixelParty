@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BrokenBallad.ogg-54092b561c7892def3a25a44853f7ebc.oggstr"
+
+[deps]
+
+source_file="res://UI/BrokenBallad.ogg"
+dest_files=[ "res://.import/BrokenBallad.ogg-54092b561c7892def3a25a44853f7ebc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

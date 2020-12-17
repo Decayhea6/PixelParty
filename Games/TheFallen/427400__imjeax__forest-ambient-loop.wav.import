@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/427400__imjeax__forest-ambient-loop.wav-516907efa4799623eaac6dde8892188a.sample"
+
+[deps]
+
+source_file="res://Games/TheFallen/427400__imjeax__forest-ambient-loop.wav"
+dest_files=[ "res://.import/427400__imjeax__forest-ambient-loop.wav-516907efa4799623eaac6dde8892188a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
