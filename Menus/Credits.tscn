@@ -29,23 +29,23 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_left = -4.0
-margin_top = 90.0
-margin_right = 1077.0
-margin_bottom = 501.0
+margin_left = -0.632629
+margin_top = 93.3674
+margin_right = 1080.37
+margin_bottom = 504.367
 custom_fonts/font = SubResource( 1 )
 text = "Game Design and Idea By Denis Khatnyuk
 
 Some sfx from freeound by imjeax
 
-Pixel Fonts made by Jason Kottke from www.fontsquirrel.com
+Some Fonts made by Jason Kottke from www.fontsquirrel.com
 
 Fallen icons from: Justin NIchole,  (OpenGameart)
 	
-Main Theme is Bossa Antigua by Kevin MacLeod
+Excuse me, what? main theme is Bossa Antigua by Kevin MacLeod
 Link: https://incompetech.filmmusic.io/song/3454-bossa-antigua
 
-All Licenses Are CC 3 or 4 Unless otherwise specified"
+Most Licenses Are CC By 4 or MIT"
 align = 1
 valign = 1
 __meta__ = {

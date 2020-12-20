@@ -23,7 +23,7 @@ grow_begin = 18.0
 thickness = 8
 
 [sub_resource type="DynamicFont" id=5]
-size = 35
+size = 33
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=6]
@@ -48,9 +48,9 @@ __meta__ = {
 
 [node name="Gameselect" type="OptionButton" parent="."]
 margin_left = 470.753
-margin_top = 331.438
+margin_top = 131.438
 margin_right = 982.753
-margin_bottom = 409.438
+margin_bottom = 209.438
 focus_mode = 0
 theme = ExtResource( 3 )
 custom_fonts/font = SubResource( 1 )
@@ -62,10 +62,10 @@ __meta__ = {
 }
 
 [node name="Maxplayers" type="SpinBox" parent="."]
-margin_left = 456.779
-margin_top = 129.565
-margin_right = 654.779
-margin_bottom = 193.565
+margin_left = 457.0
+margin_top = 313.0
+margin_right = 677.0
+margin_bottom = 386.0
 theme = ExtResource( 3 )
 min_value = 2.0
 max_value = 256.0
@@ -91,6 +91,8 @@ theme = ExtResource( 3 )
 custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Hi"
 max_length = 25
 __meta__ = {
 "_edit_use_anchors_": false
@@ -137,9 +139,9 @@ __meta__ = {
 
 [node name="subtitlelobby" type="Label" parent="."]
 margin_left = 62.0453
-margin_top = 238.732
+margin_top = 234.732
 margin_right = 422.045
-margin_bottom = 280.732
+margin_bottom = 276.732
 rect_pivot_offset = Vector2( 85.6919, 15.5 )
 custom_fonts/font = SubResource( 7 )
 text = "Lobby name:"
@@ -149,9 +151,9 @@ __meta__ = {
 
 [node name="subtitlegamemode" type="Label" parent="."]
 margin_left = 66.153
-margin_top = 341.673
+margin_top = 142.673
 margin_right = 361.153
-margin_bottom = 383.673
+margin_bottom = 184.673
 rect_pivot_offset = Vector2( 85.6919, 15.5 )
 custom_fonts/font = SubResource( 7 )
 text = "Gamemode:"
@@ -159,11 +161,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="subtitlegamemode2" type="Label" parent="."]
+[node name="subtitlemaxplayers" type="Label" parent="."]
 margin_left = 61.0
-margin_top = 142.0
+margin_top = 334.0
 margin_right = 456.0
-margin_bottom = 207.0
+margin_bottom = 399.0
 rect_pivot_offset = Vector2( 85.6919, 15.5 )
 custom_fonts/font = SubResource( 7 )
 text = "Max Players:"

@@ -1,6 +1,8 @@
 extends Menu
 
 func _ready():
+	if vars.MusicEnabled:
+		ThemeSong.playing = true
 	$Lobbyname.text = vars.presetlobbyname
 #	$Gameselect.add_item("Chat")
 	$Gameselect.add_item("The Fallen")

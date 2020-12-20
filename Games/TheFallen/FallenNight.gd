@@ -41,18 +41,19 @@ func next_role():
 	elif roles_left_to_go.has("restless"):
 		rolegoing = "restless"
 	else:
+		rolegoing = "finished"
 		#this means its empty, so we start voting
 		$AnimationPlayer.play("fade_out")
 		yield(get_tree().create_timer(2.5), "timeout")
 		$AnimationPlayer.play("backtogrey")
 		yield(get_tree().create_timer(2), "timeout")
 		get_tree().change_scene("res://Games/TheFallen/FallenVoting.tscn")
-
-	for player in vars.playerinfos:
-		if vars.playerinfos[player]["OGFallenRole"] == rolegoing:
-			vars.rpc_id(player, "get_protected", vars.defendedplayer)
-			vars.rpc_id(player, "your_turn_to_go" ,vars.playerinfos[player]["OGFallenRole"])
-			$AnimationPlayer.play(rolegoing)
+	if rolegoing != "finished":
+		for player in vars.playerinfos:
+			if vars.playerinfos[player]["OGFallenRole"] == rolegoing:
+				vars.rpc_id(player, "get_protected", vars.defendedplayer)
+				vars.rpc_id(player, "your_turn_to_go" ,vars.playerinfos[player]["OGFallenRole"])
+				$AnimationPlayer.play(rolegoing)
 			
 func role_finished():
 #	print("role_finished has been called")

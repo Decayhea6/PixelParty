@@ -1,23 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Fonts/slkscrb.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/Harting_plain.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/m5x7.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonts/Titlefont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/carbontype.ttf" type="DynamicFontData" id=4]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 resource_name = "startup"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Label:rect_position")
+tracks/0/path = NodePath("title:rect_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 62.6364, -89.4729 ), Vector2( 64.3182, 1.34387 ) ]
+"values": [ Vector2( 0.636398, -89.4729 ), Vector2( 0, 1.344 ), Vector2( 0.318199, 137.344 ), Vector2( -2.35258, 98.344 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Label:rect_rotation")
+tracks/1/path = NodePath("title:rect_rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -29,28 +32,77 @@ tracks/1/keys = {
 "values": [ 0.0, 0.0 ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "votingtime"
+[sub_resource type="Animation" id=2]
 
-[sub_resource type="DynamicFont" id=2]
-size = 35
+[sub_resource type="DynamicFont" id=3]
+size = 80
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 170
+font_data = ExtResource( 4 )
 
 [node name="root" type="Node2D"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/startup = SubResource( 3 )
-anims/votingtime = SubResource( 1 )
+autoplay = "startup"
+anims/startup = SubResource( 1 )
+anims/votingtime = SubResource( 2 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 64.3182
-margin_top = 1.34387
-margin_right = 1002.32
-margin_bottom = 88.3439
-custom_fonts/font = SubResource( 2 )
-text = "- Voting Time -"
+[node name="title" type="Label" parent="."]
+margin_left = -2.35258
+margin_top = 98.344
+margin_right = 1077.65
+margin_bottom = 185.344
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.701961, 0.898039, 0.623529, 1 )
+text = "Voting Time"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayersVoted" type="Label" parent="."]
+margin_left = 635.113
+margin_top = 5.77975
+margin_right = 1070.11
+margin_bottom = 37.7798
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.356863, 0.556863, 0.988235, 1 )
+text = "0/5 players have voted"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="info" type="Label" parent="."]
+margin_left = 25.1627
+margin_top = 485.947
+margin_right = 1055.16
+margin_bottom = 634.947
+custom_fonts/font = ExtResource( 3 )
+text = "Talk and figure out who you want to vote for"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="questionMark" type="Label" parent="."]
+margin_left = 491.0
+margin_top = 253.0
+margin_right = 614.0
+margin_bottom = 444.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 0.501961, 0.52549, 1 )
+text = "?"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -627,10 +627,10 @@ stream = ExtResource( 14 )
 volume_db = -8.077
 
 [node name="Readyplayers" type="Label" parent="."]
-margin_left = 858.608
-margin_top = 8.32444
-margin_right = 1084.61
-margin_bottom = 32.3244
+margin_left = 854.608
+margin_top = 11.3244
+margin_right = 1080.61
+margin_bottom = 35.3244
 custom_fonts/font = SubResource( 7 )
 text = "0/11 players are ready"
 __meta__ = {
